@@ -1,5 +1,4 @@
 # import open cv and numpy
-import imp
 import cv2
 import numpy as np
 from object_detector import object_detector
@@ -20,7 +19,7 @@ while True:
     image = cv2.resize(frame, (256,256))
     print(image.shape)
 
-    # cv2.imshow('2nd window', image)
+    cv2.imshow('2nd window', image)
     prediction = object_detector(model, image)
     print(prediction)
     
